@@ -6,9 +6,13 @@
 // even after you already figured it out. If you got everything working and
 // feel ready for the next exercise, remove the `I AM NOT DONE` comment below.
 
-// I AM NOT DONE
+
 
 fn main() {
-    x = 5;
+   let mut x = 10;
     println!("x has the value {}", x);
+
+    x = 5;
+
+    println!("No it's {}", x);
 }
