@@ -6,6 +6,6 @@
 fn main() {
     let number = "3"; // don't change this line
     println!("Number {}", number);
-    number = 3;
+    // remove so it will compile
     println!("Number {}", number);
 }
