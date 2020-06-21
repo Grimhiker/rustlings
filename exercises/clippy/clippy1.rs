@@ -13,5 +13,6 @@ fn main() {
     let y = 1.2332f64;
     if y != x {
         println!("Success!");
+        // it compiles fine without changing anything 
     }
 }
