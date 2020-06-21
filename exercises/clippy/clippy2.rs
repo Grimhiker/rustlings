@@ -10,4 +10,4 @@ fn main() {
         res += x;
     }
     println!("{}", res);
-}
+} // compiles 
