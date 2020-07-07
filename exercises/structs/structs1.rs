@@ -4,10 +4,19 @@
 // I AM NOT DONE
 
 struct ColorClassicStruct {
-    // TODO: Something goes here
+    name: String,
+    hex: String,
 }
 
-struct ColorTupleStruct(/* TODO: Something goes here */);
+impl ColorClassicStruct {
+    fn classic(name: &str, hex: &str) -> Self {
+        Self {name: name.into(),
+        hex: hex.into(),
+    }
+    } 
+}
+
+struct ColorTupleStruct<'a> (&'a str, &'a str);
 
 #[derive(Debug)]
 struct UnitStruct;
@@ -18,6 +27,7 @@ mod tests {
 
     #[test]
     fn classic_c_structs() {
+        let green = ColorClassicStruct::classic("green", "00FF00");
         // TODO: Instantiate a classic c struct!
         // let green =
 
@@ -27,6 +37,7 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
+        let green = ColorTupleStruct("green", "#00FF00",);
         // TODO: Instantiate a tuple struct!
         // let green =
 
@@ -37,7 +48,8 @@ mod tests {
     #[test]
     fn unit_structs() {
         // TODO: Instantiate a unit struct!
-        // let unit_struct =
+        let unit_struct = UnitStruct; 
+
         let message = format!("{:?}s are fun!", unit_struct);
 
         assert_eq!(message, "UnitStructs are fun!");
